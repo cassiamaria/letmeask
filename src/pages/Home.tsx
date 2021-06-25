@@ -9,6 +9,7 @@ import '../styles/auth.scss'
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
+import toast,{ Toaster } from 'react-hot-toast';
 
 export function Home() {
     const history = useHistory();
@@ -32,9 +33,12 @@ export function Home() {
 
         const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
-        if(!roomRef.exists()) {
-            alert('Room does not exists.');
-            return;
+        if (!roomRef.exists()) {
+            throw toast.error('Desculpe, essa sala não existe!');
+        }
+
+        if (roomRef.val().endedAt) {
+            throw toast.error('Desculpe, a sala já foi encerrada!')
         }
         
         history.push(`/rooms/${roomCode}`)
