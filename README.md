@@ -14,7 +14,7 @@ This project was for people to interact through question rooms. In it you can cr
 
 **Demo**: https://letmeask-c2500.web.app/
 
-## 🧪 Technologies
+## Technologies
 
 This project was developed using the following technologies:
 
