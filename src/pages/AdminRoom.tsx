@@ -4,8 +4,6 @@ import logoImg from '../assets/images/logo.svg';
 import deleteImg from '../assets/images/delete.svg';
 import checkImg from '../assets/images/check.svg';
 import answerImg from '../assets/images/answer.svg';
-import emptyQuestions from '../assets/images/empty-questions.svg';
-
 
 import { Button } from '../components/Button';
 import { RoomCode } from '../components/RoomCode';
@@ -101,9 +99,6 @@ export function AdminRoom() {
                         <img src={deleteImg} alt="Remover pergunta" />
                       </button>
                     </Question>
-                    // <img src={emptyQuestions} alt="" />
-                    // <h3>Nenhuma pergunta por aqui...</h3>
-                    // <span>Envie o código desta sala para seus amigos e comece a responder perguntas!</span>
                 )
             })}
         </div>
